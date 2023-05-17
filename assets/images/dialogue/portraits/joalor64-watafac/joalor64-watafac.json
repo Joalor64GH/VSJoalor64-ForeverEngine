@@ -1,0 +1,12 @@
+{
+    "name": "joalor64-watafac",
+    "expressions": {
+        "normal": "Joalor64 Portrait Enter"
+    },
+	"scale": 2.0,
+    "position": "left",
+	"loop":"false",
+    "sounds": [
+        "pixelText"
+    ]
+}

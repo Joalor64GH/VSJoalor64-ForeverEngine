@@ -1,0 +1,31 @@
+{
+    "box": "speech_bubble_talking",
+    "boxState": "normal",
+    "dialogue": [
+        {
+            "portrait": "joalor64",
+            "expression": "Joalor64 Portrait Enter",
+            "text": "This is test dialogue"
+        },
+        {
+            "portrait": "bf",
+            "expression": "normal",
+            "text": "oh fr fr?? ong?"
+        },
+        {
+            "portrait": "joalor64",
+            "expression": "Joalor64 Portrait Enter",
+            "text": "yeah because i have no idea how this works"
+        },
+        {
+            "portrait": "bf",
+            "expression": "smug",
+            "text": "uhh okay lmao"
+        },
+        {
+            "portrait": "joalor64",
+            "expression": "Joalor64 Portrait Enter",
+            "text": "deez"
+        }
+    ]
+}
