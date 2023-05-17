@@ -31,6 +31,9 @@ class MainMenuState extends MusicBeatState
 	var magenta:FlxSprite;
 	var camFollow:FlxObject;
 
+	public static var firstStart:Bool = true;
+	public static var finishedFunnyMove:Bool = false;
+
 	var optionShit:Array<String> = ['story mode', 'freeplay', 'donate', 'options'];
 	var canSnap:Array<Float> = [];
 
@@ -124,15 +127,15 @@ class MainMenuState extends MusicBeatState
 			menuItem.scrollFactor.set();
 			menuItem.antialiasing = true;
 			menuItem.updateHitbox();
-
-			/*
-				FlxTween.tween(menuItem, {alpha: 1, x: ((FlxG.width / 2) - (menuItem.width / 2))}, 0.35, {
-					ease: FlxEase.smootherStepInOut,
-					onComplete: function(tween:FlxTween)
+			if (firstStart)
+				FlxTween.tween(menuItem,{y: 60 + (i * 160)},1 + (i * 0.25) ,{ease: FlxEase.expoInOut, onComplete: function(flxTween:FlxTween) 
 					{
-						canSnap[i] = 0;
+						finishedFunnyMove = true; 
+						changeItem();
 					}
-			});*/
+				});
+			else
+				menuItem.y = 60 + (i * 160);
 		}
 
 		// set the camera to actually follow the camera object that was created before
