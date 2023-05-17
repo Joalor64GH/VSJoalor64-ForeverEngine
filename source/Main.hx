@@ -56,7 +56,7 @@ class Main extends Sprite
 	**/
 	public static var gameWeeks:Array<Dynamic> = [
 		[['Tutorial'], ['gf'], [FlxColor.fromRGB(129, 100, 223)], 'Funky Beginnings'],
-		/*[
+		[
 			['Code-And-Stuff', 'Imagination', 'The-Finale'],
 			['joalor64', 'joalor64', 'joalor64'],
 			[FlxColor.fromRGB(0, 53, 255)],
@@ -67,7 +67,7 @@ class Main extends Sprite
 			['ushanka'],
 			[FlxColor.fromRGB(0, 53, 255)],
 			'Funni Bonus'
-		],*/
+		],
 	];
 
 	// most of these variables are just from the base game!

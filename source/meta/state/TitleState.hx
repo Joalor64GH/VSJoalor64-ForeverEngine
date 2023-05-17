@@ -214,20 +214,7 @@ class TitleState extends MusicBeatState
 				// Check if version is outdated
 
 				var version:String = "v" + Application.current.meta.get('version');
-				/*
-					if (version.trim() != NGio.GAME_VER_NUMS.trim() && !OutdatedSubState.leftState)
-					{
-						FlxG.switchState(new OutdatedSubState());
-						trace('OLD VERSION!');
-						trace('old ver');
-						trace(version.trim());
-						trace('cur ver');
-						trace(NGio.GAME_VER_NUMS.trim());
-					}
-					else
-					{ */
 				Main.switchState(this, new MainMenuState());
-				// }
 			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 		}
@@ -351,6 +338,5 @@ class TitleState extends MusicBeatState
 			remove(credGroup);
 			skippedIntro = true;
 		}
-		//
 	}
 }
