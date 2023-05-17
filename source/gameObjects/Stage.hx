@@ -29,6 +29,8 @@ using StringTools;
 **/
 class Stage extends FlxTypedGroup<FlxBasic>
 {
+	public var curStage:String;
+	
 	public var foreground:FlxTypedGroup<FlxBasic>;
 
 	public function new(curStage)

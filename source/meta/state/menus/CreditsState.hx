@@ -1,4 +1,4 @@
-package meta.state;
+package meta.state.menus;
 
 import meta.Controls;
 import meta.CoolUtil;
@@ -23,7 +23,7 @@ import sys.FileSystem;
 
 using StringTools;
 
-class CreditsState extends MusicBeatState
+class CreditsState extends meta.MusicBeat.MusicBeatState
 {
 	var credits:Array<CreditsMetadata> = [];
 
