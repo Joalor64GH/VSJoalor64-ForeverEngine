@@ -32,6 +32,17 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = ['story mode', 'freeplay', 'donate', 'options'];
 	var canSnap:Array<Float> = [];
 
+	public static var bgPaths:Array<String> = [
+		'menuBG',
+		'menuBGRed',
+		'menuBGMint',
+		'menuBGCyan',
+		'menuBGBlue',
+		'menuBGPurple',
+		'menuBGMagenta',
+		'menuDesat'
+	];
+
 	// the create 'state'
 	override function create()
 	{
@@ -52,11 +63,11 @@ class MainMenuState extends MusicBeatState
 		persistentUpdate = persistentDraw = true;
 
 		// background
-		bg = new FlxSprite(-85);
-		bg.loadGraphic(Paths.image('menus/base/menuBG'));
+		bg = new FlxSprite(-80);
+		bg.loadGraphic(randomizeBG());
 		bg.scrollFactor.x = 0;
 		bg.scrollFactor.y = 0.18;
-		bg.setGraphicSize(Std.int(bg.width * 1.1));
+		bg.setGraphicSize(Std.int(bg.width * 1.175));
 		bg.updateHitbox();
 		bg.screenCenter();
 		bg.antialiasing = true;
@@ -287,5 +298,11 @@ class MainMenuState extends MusicBeatState
 		menuItems.members[Math.floor(curSelected)].updateHitbox();
 
 		lastCurSelected = Math.floor(curSelected);
+	}
+
+	public static function randomizeBG():flixel.system.FlxAssets.FlxGraphicAsset
+	{
+		var chance:Int = FlxG.random.int(0, bgPaths.length - 1);
+		return Paths.image('menus/base/${bgPaths[chance]}');
 	}
 }
