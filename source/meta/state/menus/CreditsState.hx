@@ -129,6 +129,29 @@ class CreditsState extends meta.MusicBeat.MusicBeatState
 			changeSelection(-Std.int(FlxG.mouse.wheel));
 		}
 
+		if (controls.ACCEPT) {
+			switch (curSelected) {
+				case 0: 
+					#if linux
+					Sys.command('/usr/bin/xdg-open', ["https://www.youtube.com/channel/UC4tRMRL_iAHX5n1qQpHibfg", "&"]);
+					#else
+					FlxG.openURL('https://www.youtube.com/channel/UC4tRMRL_iAHX5n1qQpHibfg');
+					#end
+				case 1: 
+					#if linux
+					Sys.command('/usr/bin/xdg-open', ["https://github.com/NyxTheShield", "&"]);
+					#else
+					FlxG.openURL('https://github.com/NyxTheShield');
+					#end
+				case 2: 
+					#if linux
+					Sys.command('/usr/bin/xdg-open', ["https://gamebanana.com/members/1908070", "&"]);
+					#else
+					FlxG.openURL('https://gamebanana.com/members/1908070');
+					#end
+			}
+		}
+
 		if (controls.BACK)
 			FlxG.switchState(new MainMenuState());
 	}
