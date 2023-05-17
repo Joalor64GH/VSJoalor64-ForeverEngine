@@ -245,15 +245,9 @@ class PlayState extends MusicBeatState
 			assetModifier = SONG.assetModifier;
 
 		changeableSkin = Init.trueSettings.get("UI Skin");
-		if ((curStage.startsWith("school")) && ((determinedChartType == "FNF")))
-			assetModifier = 'pixel';
 
 		// add characters
 		add(gf);
-
-		// add limo cus dumb layering
-		if (curStage == 'highway')
-			add(stageBuild.limo);
 
 		add(dadOpponent);
 		add(boyfriend);
@@ -656,19 +650,6 @@ class PlayState extends MusicBeatState
 
 					var getCenterX = char.getMidpoint().x - 100;
 					var getCenterY = char.getMidpoint().y - 100;
-					switch (curStage)
-					{
-						case 'limo':
-							getCenterX = char.getMidpoint().x - 300;
-						case 'mall':
-							getCenterY = char.getMidpoint().y - 200;
-						case 'school':
-							getCenterX = char.getMidpoint().x - 200;
-							getCenterY = char.getMidpoint().y - 200;
-						case 'schoolEvil':
-							getCenterX = char.getMidpoint().x - 200;
-							getCenterY = char.getMidpoint().y - 200;
-					}
 
 					camFollow.setPosition(getCenterX + camDisplaceX - char.characterData.camOffsetX,
 						getCenterY + camDisplaceY + char.characterData.camOffsetY);
