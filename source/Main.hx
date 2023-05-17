@@ -39,6 +39,7 @@ class Main extends Sprite
 	public static var framerate:Int = 120; // How many frames per second the game should run at.
 
 	public static var gameVersion:String = '0.3.1';
+	public static var joalor64Version:String = '1.0.1';
 
 	var zoom:Float = -1; // If -1, zoom is automatically calculated to fit the window dimensions.
 	var skipSplash:Bool = true; // Whether to skip the flixel splash screen that appears in release mode.
@@ -55,42 +56,18 @@ class Main extends Sprite
 	**/
 	public static var gameWeeks:Array<Dynamic> = [
 		[['Tutorial'], ['gf'], [FlxColor.fromRGB(129, 100, 223)], 'Funky Beginnings'],
-		[
-			['Bopeebo', 'Fresh', 'Dadbattle'],
-			['dad', 'dad', 'dad'],
-			[FlxColor.fromRGB(129, 100, 223)],
-			'vs. DADDY DEAREST'
+		/*[
+			['Code-And-Stuff', 'Imagination', 'The-Finale'],
+			['joalor64', 'joalor64', 'joalor64'],
+			[FlxColor.fromRGB(0, 53, 255)],
+			'VS Joalor64'
 		],
 		[
-			['Spookeez', 'South', 'Monster'],
-			['spooky', 'spooky', 'monster'],
-			[FlxColor.fromRGB(30, 45, 60)],
-			'Spooky Month'
-		],
-		[
-			['Pico', 'Philly-Nice', 'Blammed'],
-			['pico'],
-			[FlxColor.fromRGB(111, 19, 60)],
-			'vs. Pico'
-		],
-		[
-			['Satin-Panties', 'High', 'Milf'],
-			['mom'],
-			[FlxColor.fromRGB(203, 113, 170)],
-			'MOMMY MUST MURDER'
-		],
-		[
-			['Cocoa', 'Eggnog', 'Winter-Horrorland'],
-			['parents-christmas', 'parents-christmas', 'monster-christmas'],
-			[FlxColor.fromRGB(141, 165, 206)],
-			'RED SNOW'
-		],
-		[
-			['Senpai', 'Roses', 'Thorns'],
-			['senpai', 'senpai', 'spirit'],
-			[FlxColor.fromRGB(206, 106, 169)],
-			"hating simulator ft. moawling"
-		],
+			['Klassicheskiy-Ritm'],
+			['ushanka'],
+			[FlxColor.fromRGB(0, 53, 255)],
+			'Funni Bonus'
+		],*/
 	];
 
 	// most of these variables are just from the base game!
