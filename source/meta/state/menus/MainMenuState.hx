@@ -13,6 +13,8 @@ import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import meta.MusicBeat.MusicBeatState;
 import meta.data.dependency.Discord;
+import meta.state.*;
+import meta.state.menus.*;
 
 using StringTools;
 
@@ -149,8 +151,6 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
-
-		//
 	}
 
 	// var colorTest:Float = 0;
@@ -159,9 +159,6 @@ class MainMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		// colorTest += 0.125;
-		// bg.color = FlxColor.fromHSB(colorTest, 100, 100, 0.5);
-
 		var up = controls.UI_UP;
 		var down = controls.UI_DOWN;
 		var up_p = controls.UI_UP_P;
