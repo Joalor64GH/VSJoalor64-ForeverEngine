@@ -29,6 +29,8 @@ using StringTools;
 **/
 class Stage extends FlxTypedGroup<FlxBasic>
 {
+	var snow:FNFSprite;
+
 	public var curStage:String;
 	
 	public var foreground:FlxTypedGroup<FlxBasic>;
@@ -68,6 +70,7 @@ class Stage extends FlxTypedGroup<FlxBasic>
 				var bg:FNFSprite = new FNFSprite(-600, -600).loadGraphic(Paths.image('backgrounds/' + curStage + '/room'));
 				bg.antialiasing = true;
 				bg.scrollFactor.set(1, 1);
+				bg.scale.set(1.5, 1.5);
 				bg.active = false;
 
 				// add to the final array
@@ -76,9 +79,22 @@ class Stage extends FlxTypedGroup<FlxBasic>
 			case 'russia':
 				curStage = 'russia';
 				PlayState.defaultCamZoom = 0.6;
+
+				var snowTex = Paths.getSparrowAtlas('backgrounds/' + curStage + '/snowGif');
+
+				snow = new FNFSprite(0, 0);
+				snow.frames = snowTex;
+				snow.animation.addByPrefix('snowLoop', 'anim0');
+				snow.animation.play('snowLoop');
+				snow.scrollFactor.set(0.3, 0.3);
+				snow.antialiasing = true;
+				snow.scale.set(5, 5);
+				add(snow);
+
 				var bg:FNFSprite = new FNFSprite(-600, -600).loadGraphic(Paths.image('backgrounds/' + curStage + '/russia'));
 				bg.antialiasing = true;
 				bg.scrollFactor.set(1, 1);
+				bg.scale.set(1.5, 1.5);
 				bg.active = false;
 
 				// add to the final array
